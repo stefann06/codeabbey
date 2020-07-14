@@ -1,0 +1,31 @@
+def multi_line_input():
+    """ Function take multi-line input from user for copy/paste purpose and returns a list of the integer values of the values provided """
+    """ first line is a counter of how many lines are to follow to be used in next functions,also it is global"""
+    global n
+    n = int(input())
+    array = []
+    for i in range(n) :
+        array.append(input().split())
+    return array
+
+def minimum_of_two(numbers):
+    """ for each line with pair values given through the input by the user and procesed by the multi_line_function ,this function show the minimum of the pair """
+    """ results are printed all in one line as strings separated by a blank space """  
+    array2=[]
+    for i in range(n):
+        numbers[i][0] = int(numbers[i][0])
+        numbers[i][1] = int(numbers[i][1])
+        if numbers[i][0] < numbers[i][1]:
+            c = numbers[i][0]
+            array2.append(str(c))
+        else:
+            c = numbers[i][1]
+            array2.append(str(c))
+        result = (" ").join(array2)
+    return result
+
+
+#main
+a = multi_line_input()   
+b = minimum_of_two(a)
+print(b)
