@@ -3,7 +3,7 @@ def sum_of_two_numbers(numbers):
     """ It returns the result as integer into a variable also called result and prints it to the screen """
     result = 0
     for element in numbers:
-        element=int(element)
+        element = int(element)
         result += element
     return result
 
