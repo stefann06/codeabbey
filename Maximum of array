@@ -7,11 +7,11 @@ def max_min_of_array(numbers):
     maxvalue = numbers[0]
     array3 = []
     for j in numbers:
-        if j>maxvalue:
+        if j > maxvalue:
             maxvalue = j
     array3.append(str(maxvalue))
     for i in numbers:
-        if i<minvalue:
+        if i < minvalue:
             minvalue = i
     array3.append(str(minvalue))
     result = (" ").join(array3)
