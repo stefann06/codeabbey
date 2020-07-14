@@ -1,0 +1,28 @@
+def max_min_of_array(numbers):
+    """ creates 2 variables for min and max values which will be added to result variable as strings  """
+    """ temporary value for the two variables will be the first index of the list given as argument when calling the function """
+    """ then it loops through the argument list looking for higher/lower values then the actual values of minvalue and maxvalue and store """
+    """ the new values of minvalue and maxvalue variables , after the loop has finished it will return the updated minvalue and maxvalue through the result variable """
+    minvalue = numbers[0]
+    maxvalue = numbers[0]
+    array3 = []
+    for j in numbers:
+        if j>maxvalue:
+            maxvalue = j
+    array3.append(str(maxvalue))
+    for i in numbers:
+        if i<minvalue:
+            minvalue = i
+    array3.append(str(minvalue))
+    result = (" ").join(array3)
+    return result
+    
+
+#Main    
+array = input()
+array = array.split(" ")   # splits the elements of array
+array2 = []
+for k in array:            #loops through elements of array
+    array2.append(int(k))  # stores into array2 the int values of each array element
+a = max_min_of_array(array2)
+print(a)
