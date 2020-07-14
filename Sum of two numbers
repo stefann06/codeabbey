@@ -1,0 +1,16 @@
+def sum_of_two_numbers(numbers):
+    """ Takes in input data in one line separated by a blank space , for copy/paste and returns the sum of each element """
+    """ It returns the result as integer into a variable also called result and prints it to the screen """
+    result = 0
+    for element in numbers:
+        element=int(element)
+        result += element
+    return result
+
+
+#Main
+number_list = input("Which numbers do you want to add?\n") 
+number_list = number_list.split(" ")
+a = sum_of_two_numbers(number_list)
+print(a)
+        
