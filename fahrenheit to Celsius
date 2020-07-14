@@ -1,0 +1,25 @@
+def one_line_input():
+    """ takes a long single line input form user - for Copy/Paste ,splits it and returns a list with the input data as integers """
+    """ first value actually represents a counter of how many values to convert """
+    array = input()
+    array = array.split(" ")
+    array2 = []
+    for i in array:
+        array2.append(int(i))    
+    return array2
+
+def fahrenheit_to_celsius(temp):
+    """ loops through the input list and returns values as string all into a variable ,separated by a blank space,prints the variable """
+    """ first value is a counter of how many values to convert """
+    array = []
+    for i in range(1,(temp[0])+1):
+        a = (((temp[i])-32) / 1.8)
+        a = round(a)
+        array.append(str(a))
+    result = (" ").join(array)
+    return result
+
+#Main
+a = one_line_input()        
+b = fahrenheit_to_celsius(a)
+print(b)
