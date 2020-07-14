@@ -11,7 +11,7 @@ def multi_line_input():
 def minimum_of_three(numbers):
     """ for each line of three values given through the input by the user and procesed by the multi_line_function ,this function show the minimum of the 3 """
     """ results are printed all in one line as strings separated by a blank space """
-    array2=[]
+    array2 = []
     for i in range(n):
         numbers[i][0] = int(numbers[i][0])
         numbers[i][1] = int(numbers[i][1])
