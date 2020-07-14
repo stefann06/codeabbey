@@ -1,0 +1,24 @@
+def multi_line_input():
+    """ Function take multi-line input from user for copy/paste purpose and returns a list of the integer values of the values provided """
+    """ first line is a counter of how many lines are to follow to be used in next functions,also it is global"""
+    global n
+    n = int(input())
+    array = []
+    for i in range(n) :
+        array.append(input().split())
+    return array
+
+def sums_in_loop(numbers):
+    """ the function returns the sum of each pair of elements form each line from the input "" """
+    array2 = []
+    for i in range(n):
+        c = int(numbers[i][0]) + int(numbers[i][1])
+        array2.append(str(c))
+        result = (" ").join(array2)
+    return result
+
+
+#Main
+a = multi_line_input()   
+b = sums_in_loop(a)
+print(b)
