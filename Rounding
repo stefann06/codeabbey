@@ -1,0 +1,26 @@
+def multi_line_input():
+    """ Function take multi-line input from user for copy/paste purpose and returns a list of the integer values of the values provided """
+    """ first line is a counter of how many lines are to follow to be used in next functions,also it is global"""
+    global n
+    n = int(input())
+    array = []
+    for i in range(n) :
+        array.append(input().split())
+    return array
+
+def rounding(numbers):
+    """ Takes each pair of values,divides the first by the second value and returns a rounded to nearest integer result. """
+    """ except where the value is exactly .5 , in which case it rounds up to nearest integer . result is a string"""
+    array=[]
+    for i in range(n):
+        a = int(numbers[i][0])/int(numbers[i][1])
+        a = round(a)
+        array.append(str(a))
+        result = (" ").join(array)
+    return result
+
+
+#Main
+a = multi_line_input()   
+b = rounding(a)
+print(b)
