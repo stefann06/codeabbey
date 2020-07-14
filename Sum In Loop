@@ -1,0 +1,26 @@
+def multi_line_input():
+    """ Function take a multi-line input from user for copy/paste purpose """
+    try:
+        while True:
+            data=input()
+            if not data: break
+            yield data
+    except KeyboardInterrupt:
+        return
+    
+def sum_in_loop(numbers):
+    """ returns the variable answer which stores the sum of the elements in loop  """
+    answer = 0
+    for q in range(1,len(numbers)):
+        for w in numbers[q]:
+            w=float(w)
+            answer += w
+        return answer
+
+
+#Main
+input_list = list(multi_line_input())
+for e in range(len(input_list)):
+    input_list[e] = input_list[e].split()    
+a = sum_in_loop(input_list)
+print(a)
